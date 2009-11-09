@@ -31,7 +31,7 @@ function doi_link (xPaths) {
             var doi_found=RegExp.$1;
             if (ar && doi_found) {
                 //when a DOI is found
-                thisElement.innerHTML = '<a href="http://dx.doi.org/'+doi_found+'">'+thisElement.innerHTML+"</a>";
+                thisElement.innerHTML = thisElement.innerHTML.replace(doi_found,'<a href="http://dx.doi.org/'+doi_found+'">'+doi_found+"</a>");
             }
         }
     }
